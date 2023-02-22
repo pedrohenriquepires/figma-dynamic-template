@@ -1,5 +1,6 @@
 <center>
   <img src="docs/logo.svg" width="300">
+  <a href="https://github.com/pedrohenriquepires/figma-dynamic-template/actions/workflows/build.yml" about="_blank"><img src="https://github.com/pedrohenriquepires/figma-dynamic-template/actions/workflows/build.yml/badge.svg"></a>
 </center>
 
 ## Development guide
@@ -17,7 +18,7 @@ To build the plugin:
 $ npm run build
 ```
 
-This will generate a [`manifest.json`](https://figma.com/plugin-docs/manifest/) file and a `build/` directory containing the JavaScript bundle(s) for the plugin.
+This will generate a [`manifest.json`](https://figma.com/plugin-docs/manifest/) file and a `dist/` directory containing the JavaScript bundle(s) for the plugin.
 
 To watch for code changes and rebuild the plugin automatically:
 

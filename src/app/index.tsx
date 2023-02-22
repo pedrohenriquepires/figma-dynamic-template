@@ -1,8 +1,8 @@
 import { createRoot } from 'react-dom/client'
-import App from './components/App'
+import { Main } from './ui/components/main/main.component'
 
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.getElementById('react-page')
   const root = createRoot(container)
-  root.render(<App />)
+  root.render(<Main />)
 })

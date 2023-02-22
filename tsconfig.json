@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.paths.json",
   "compilerOptions": {
     "target": "es6",
     "outDir": "dist",
@@ -11,11 +12,5 @@
     "noImplicitAny": true,
     "moduleResolution": "node",
     "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
-    "baseUrl": "src",
-    "paths": {
-      "~/@types/*": ["@types/*"],
-      "~/app/*": ["app/*"],
-      "~/plugin/*": ["plugin/*"]
-    }
   }
 }

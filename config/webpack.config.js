@@ -1,7 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const alias = require('./alias')
+const paths = require('./paths')
 
 module.exports = (_, argv) => ({
   mode: argv.mode === 'production' ? 'production' : 'development',
@@ -10,8 +11,8 @@ module.exports = (_, argv) => ({
   devtool: argv.mode === 'production' ? false : 'inline-source-map',
 
   entry: {
-    ui: './src/app/index.tsx',
-    code: './src/plugin/index.ts',
+    ui: `${paths.appSrc}/app/index.tsx`,
+    code: `${paths.appSrc}/plugin/index.ts`,
   },
 
   module: {
@@ -24,38 +25,42 @@ module.exports = (_, argv) => ({
           loader: 'babel-loader',
           options: {
             presets: [
-              ["@babel/preset-react", {
-                "runtime": "automatic"
-              }]
-            ]
-          }
-        }
+              [
+                '@babel/preset-react',
+                {
+                  runtime: 'automatic',
+                },
+              ],
+            ],
+          },
+        },
       },
       { test: /\.tsx?$/, use: 'ts-loader', exclude: /node_modules/ },
     ],
   },
 
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js']
+    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    alias: {
+      ...alias,
+    },
   },
 
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: paths.appDist,
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/app/index.html',
+      templateContent: '<div id="react-page"></div>',
       filename: 'ui.html',
       chunks: ['ui'],
       cache: false,
     }),
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/ui/]),
     new CopyPlugin({
-      patterns: [
-        { from: 'manifest.json' },
-      ],
+      patterns: [{ from: 'manifest.json' }],
     }),
   ],
-});
+})

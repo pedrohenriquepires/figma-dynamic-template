@@ -1,5 +1,5 @@
-import { TemplateType } from "~/@types/selection"
-import { TemplateMissingError } from "~/plugin/errors/template-missing"
+import { TemplateType } from '~/@types/selection'
+import { TemplateMissingError } from '~/plugin/errors/template-missing'
 
 export const getTemplate = () => {
   const [template] = figma.currentPage.selection

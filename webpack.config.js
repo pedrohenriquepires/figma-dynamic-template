@@ -35,8 +35,8 @@ module.exports = (_, argv) => ({
     ],
   },
 
-  resolve: { 
-    extensions: ['.tsx', '.ts', '.jsx', '.js'] 
+  resolve: {
+    extensions: ['.tsx', '.ts', '.jsx', '.js']
   },
 
   output: {

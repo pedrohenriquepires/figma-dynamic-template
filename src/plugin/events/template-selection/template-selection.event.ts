@@ -11,13 +11,13 @@ const emitGetSelection = () => {
 
     emit<GetSelectionHandler>('GET_SELECTION', {
       template,
-      properties
+      properties,
     })
-  } catch(err) {
-    if(err instanceof TemplateMissingError) {
+  } catch (err) {
+    if (err instanceof TemplateMissingError) {
       emit<GetSelectionHandler>('GET_SELECTION', {
         template: null,
-        properties: []
+        properties: [],
       })
     }
   }

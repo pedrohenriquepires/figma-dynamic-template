@@ -1,5 +1,5 @@
-import { EventHandler } from "@create-figma-plugin/utilities"
-import { TemplateType } from "~/@types/selection"
+import { EventHandler } from '@create-figma-plugin/utilities'
+import { TemplateType } from '~/@types/selection'
 
 export type SelectionData = {
   template: TemplateType | null

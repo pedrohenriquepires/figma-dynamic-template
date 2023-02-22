@@ -1,5 +1,5 @@
-import { TemplateType } from "~/@types/selection"
-import { isTextNode } from "~/plugin/utils/is-text-node"
+import { TemplateType } from '~/@types/selection'
+import { isTextNode } from '~/plugin/utils/is-text-node'
 
 const PROPERTIES_REGEX = /{([a-zA-Z0-9]*)}/g
 

@@ -1,5 +1,5 @@
-import { NodeType } from "~/@types/selection"
-import { isTextNode } from "~/plugin/utils/is-text-node"
+import { NodeType } from '~/@types/selection'
+import { isTextNode } from '~/plugin/utils/is-text-node'
 
 export const replaceVariablesOnNode = (item: object, properties: string[], node: NodeType) => {
   properties.forEach((prop: string) => {

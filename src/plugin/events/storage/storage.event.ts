@@ -1,6 +1,5 @@
-import { emit, on } from "@create-figma-plugin/utilities"
-import { GetStorageHandler, SetStorageHandler, StorageResponseHandler } from "./storage.types"
-
+import { emit, on } from '@create-figma-plugin/utilities'
+import { GetStorageHandler, SetStorageHandler, StorageResponseHandler } from './storage.types'
 
 export const setupStorageEventsListener = () => {
   on<GetStorageHandler>('GET_STORAGE', async key => {

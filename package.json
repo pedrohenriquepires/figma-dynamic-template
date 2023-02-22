@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
+    "format:source": "prettier --config .prettierrc --write '{*.ts,src/**/*.ts,src/**/*.tsx}'",
     "start": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
   },

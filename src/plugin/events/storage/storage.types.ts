@@ -1,5 +1,5 @@
-import { EventHandler } from "@create-figma-plugin/utilities"
-import { StorageKeys } from "~/@types/storage-keys"
+import { EventHandler } from '@create-figma-plugin/utilities'
+import { StorageKeys } from '~/@types/storage-keys'
 
 export interface GetStorageHandler extends EventHandler {
   name: 'GET_STORAGE'

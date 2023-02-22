@@ -1,5 +1,5 @@
-import { TemplateType } from "~/@types/selection"
-import { getNode } from "./get-node"
+import { TemplateType } from '~/@types/selection'
+import { getNode } from './get-node'
 
 export const repositionAndRenameNode = (node: ReturnType<typeof getNode>, template: TemplateType, key: number) => {
   node.name = `${node.name} Copy ${key + 1}`

@@ -1,7 +1,7 @@
-<center>
-  <img src="docs/logo.svg" width="300">
+<p align="center">
+  <img src="docs/logo.svg" width="300"><br />
   <a href="https://github.com/pedrohenriquepires/figma-dynamic-template/actions/workflows/build.yml" about="_blank"><img src="https://github.com/pedrohenriquepires/figma-dynamic-template/actions/workflows/build.yml/badge.svg"></a>
-</center>
+</p>
 
 ## Development guide
 

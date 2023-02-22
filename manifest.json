@@ -1,0 +1,10 @@
+{
+  "api": "1.0.0",
+  "editorType": [
+    "figma"
+  ],
+  "id": "dynamic-template",
+  "name": "Dynamic Template",
+  "main": "code.js",
+  "ui": "ui.html"
+}

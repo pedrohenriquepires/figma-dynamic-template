@@ -1,0 +1,6 @@
+{
+  "{src/**/*.ts,src/**/*.tsx}": [
+    "prettier --config .prettierrc --write",
+    "git add"
+  ]
+}

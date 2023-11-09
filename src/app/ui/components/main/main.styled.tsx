@@ -1,3 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const Title = styled.h1``
+export const Container = styled.div`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: ${props => props.theme.colors.background};
+  color: ${props => props.theme.colors.white};
+  padding: ${props => props.theme.padding.default};
+`

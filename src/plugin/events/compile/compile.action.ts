@@ -11,6 +11,7 @@ export const compileAction = async (list: object[]) => {
 
   await loadFonts(properties, template)
 
+  console.log(list)
   list.forEach((item, key) => {
     const node = getNode(template)
 

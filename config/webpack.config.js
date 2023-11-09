@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const { DefinePlugin } = require('webpack')
 const alias = require('./alias')
 const paths = require('./paths')
 
@@ -17,6 +18,7 @@ module.exports = (_, argv) => ({
 
   module: {
     rules: [
+      { test: /\.css$/, use: ["style-loader", "css-loader"] },
       { test: /\.(png|jpg|gif|webp|svg)$/, loader: 'url-loader' },
       {
         test: /\.tsx$/,
@@ -52,6 +54,9 @@ module.exports = (_, argv) => ({
   },
 
   plugins: [
+    // new DefinePlugin({
+    //   __VERSION__: require('../package.json').version,
+    // }),
     new HtmlWebpackPlugin({
       templateContent: '<div id="react-page"></div>',
       filename: 'ui.html',
@@ -61,6 +66,6 @@ module.exports = (_, argv) => ({
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/ui/]),
     new CopyPlugin({
       patterns: [{ from: 'manifest.json' }],
-    }),
+    })
   ],
 })

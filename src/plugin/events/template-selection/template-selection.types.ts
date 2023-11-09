@@ -8,5 +8,10 @@ export type SelectionData = {
 
 export interface GetSelectionHandler extends EventHandler {
   name: 'GET_SELECTION'
+  handler: () => void
+}
+
+export interface SetSelectionHandler extends EventHandler {
+  name: 'SET_SELECTION'
   handler: (data: SelectionData) => void
 }
